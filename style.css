@@ -154,7 +154,7 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
 
-  font-size: 7vw;
+  font-size: 4vw;
 }
 h1 span {
   margin: 10px;
@@ -239,6 +239,11 @@ h2 {
     opacity: 0.8;
     font-size: 5vw;
   }
+  .widjet_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .weather {
     position: relative;
@@ -276,10 +281,14 @@ h2 {
   }
 }
 @media screen and (min-width: 500px) and (max-width: 767px) {
+  .widjet_block {
+    display: flex;
+    justify-content: space-around;
+  }
   .weather {
     position: relative;
     top: 0px;
-    right: 20%;
+    /* right: 20%; */
     width: 200px;
     height: 244px;
     padding: 10px;
@@ -291,9 +300,9 @@ h2 {
     -o-border-radius: 1rem;
   }
   .cita {
-    position: absolute;
+    /* position: absolute;
     bottom: 4vh;
-    left: 54%;
+    left: 54%; */
   }
   .quote {
     height: 244px;

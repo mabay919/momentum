@@ -1,0 +1,305 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  transition: background-image 2s ease-in-out;
+  -webkit-transition: background-image 2s ease-in-out;
+  -moz-transition: background-image 2s ease-in-out;
+  -ms-transition: background-image 2s ease-in-out;
+  -o-transition: background-image 2s ease-in-out;
+  text-shadow: black 6px 3px 5px, black -1px 0px 3px, black 2px 1px 0,
+    black 1px -1px 0;
+}
+
+.weather-icon {
+  font-size: 6rem;
+}
+.temperature {
+  font-size: 2rem;
+}
+.weather-description {
+  font-size: 1rem;
+}
+.humidity {
+  font-size: 1rem;
+}
+.wind_speed {
+  font-size: 1rem;
+}
+.city {
+  font-size: 2rem;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30vh;
+}
+.timer {
+  font-size: 8vw;
+  width: 27vw;
+  margin: 0 auto;
+  top: 10px;
+}
+.currentDay {
+  font-size: 1.5vw;
+}
+
+.weather {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.change_back_plus {
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  outline: none;
+  background-color: rgba(243, 238, 235, 0.4);
+  border: 5px solid rgba(255, 228, 212, 0.4);
+  background-image: url(./assets/right-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  position: absolute;
+  right: 10vh;
+  bottom: 10px;
+  z-index: 3;
+  transition: 1s linear;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -ms-transition: 1s linear;
+  -o-transition: 1s linear;
+  transform: rotateZ(360deg);
+  -webkit-transform: rotateZ(360deg);
+  -moz-transform: rotateZ(360deg);
+  -ms-transform: rotateZ(360deg);
+  -o-transform: rotateZ(360deg);
+}
+
+.change_back_minus {
+  box-sizing: border-box;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  outline: none;
+  background-color: rgba(243, 238, 235, 0.4);
+  border: 5px solid rgba(255, 228, 212, 0.4);
+  background-image: url(./assets/left-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  position: absolute;
+  left: 10vh;
+  bottom: 10px;
+  z-index: 3;
+  transform: rotateZ(-360deg);
+  -webkit-transform: rotateZ(-360deg);
+  -moz-transform: rotateZ(-360deg);
+  -ms-transform: rotateZ(-360deg);
+  -o-transform: rotateZ(-360deg);
+  transition: 1s linear;
+  -webkit-transition: 1s linear;
+  -moz-transition: 1s linear;
+  -ms-transition: 1s linear;
+  -o-transition: 1s linear;
+}
+
+.change_back_plus:hover,
+.change_back_minus:hover {
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+h1 {
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  font-size: 7vw;
+}
+h1 span {
+  margin: 10px;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  font-size: 2vw;
+}
+
+.cita {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.quote {
+  font: 1.2rem Georgia, serif;
+  margin: 0;
+
+  padding: 5px;
+  border-radius: 1em;
+  width: 20vw;
+  height: 258px;
+  overflow-y: scroll;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.quote::-webkit-scrollbar {
+  display: none;
+}
+
+.quote figcaption,
+.quote blockquote {
+  margin: 0.5em;
+}
+.quote figcaption {
+  text-align: right;
+}
+.btn {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background-image: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(0.8);
+  margin: 10px;
+  position: absolute;
+  left: 30px;
+}
+.btn:hover {
+  filter: grayscale(0.2);
+}
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+.btn:active {
+  transform: scale(1.02);
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .time {
+    font-size: 6rem;
+
+    margin-top: 1vh;
+  }
+  .timer {
+    font-size: 14vw;
+    width: 50vw;
+  }
+  .currentDay {
+    font-size: 3vw;
+  }
+  h1 {
+    margin: 1rem auto;
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+    font-size: 5vw;
+  }
+
+  .weather {
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: 20px auto;
+    font-size: 20px;
+  }
+  .city {
+    font-size: 1.3rem;
+  }
+  .cita {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+  .quote {
+    font: 1.2rem Georgia, serif;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 0.1em;
+    border-radius: 1em;
+    width: 200px;
+    height: 85px;
+  }
+  .btn {
+    left: 96%;
+    bottom: 60px;
+  }
+  .change_back_minus {
+    left: 1vh;
+  }
+  .change_back_plus {
+    right: 1vh;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+  .weather {
+    position: relative;
+    top: 0px;
+    right: 20%;
+    width: 200px;
+    height: 244px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+  }
+  .cita {
+    position: absolute;
+    bottom: 4vh;
+    left: 54%;
+  }
+  .quote {
+    height: 244px;
+  }
+  .btn {
+    left: 96%;
+    bottom: 205px;
+  }
+}
